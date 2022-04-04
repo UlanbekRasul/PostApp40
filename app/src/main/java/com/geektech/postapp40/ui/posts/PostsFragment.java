@@ -2,6 +2,9 @@ package com.geektech.postapp40.ui.posts;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,10 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.geektech.postapp40.R;
 import com.geektech.postapp40.data.models.PostModel;
@@ -37,11 +36,6 @@ public class PostsFragment extends Fragment implements OnClick {
     private HashMap<Integer, String> hashMap = new HashMap<>();
 
     public PostsFragment() {
-    }
-    @Override
-    public void onStop() {
-        super.onStop();
-        getActivity().finish();
     }
 
     @Override
@@ -73,7 +67,7 @@ public class PostsFragment extends Fragment implements OnClick {
     }
 
     private void hashMapUser() {
-        hashMap.put(0, "----");
+        hashMap.put(0, "noName");
         hashMap.put(1, "Султан Джумалиев");
         hashMap.put(2, "Бекжан Маданбеков");
         hashMap.put(3, "Бакай Белеков");
